@@ -1,0 +1,107 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="stilproje.css">
+<title>Ýletisim</title>
+
+</head>
+
+<body class="iletisim">
+
+<div class="menu">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     <a href="PROJEODEV.html"><input type="submit" value="Anasayfa"></a>&nbsp; &nbsp; &nbsp; &nbsp;
+     <a href="sinemalar.html" target="_blank"><input type="submit" value="Film"></a> &nbsp; &nbsp; &nbsp; &nbsp;
+     <a href="kitap.html" target="_blank"><input type="submit" value="Kitap"></a>&nbsp; &nbsp; &nbsp; &nbsp;
+     <a href="dans.html" target="_blank"><input type="submit" value="Dans"></a>&nbsp; &nbsp; &nbsp; &nbsp;
+     <a href="iletisim.html" target="_blank"><input type="submit" value="Ýletiþim"></a>
+</div>
+
+
+
+
+<script type="text/javascript">
+
+function sendMail(){
+var mail = document.getElementById("address").value;
+var mesaj = document.getElementById("message").value;
+var konu = document.getElementById("konuu").value;
+	
+
+location.href = 'mailto:' + mail
++ '?subject=' + konu
++ '&body=' +mesaj;}
+</script>
+</head>
+<body>
+
+
+<form>
+<fieldset>
+<legend><h3>Kiþisel Bilgiler:</h3></legend>
+</fielset>
+
+Ýsim:
+<input class="iletisim" id="isim" type="text" name="isim" value="" onfocus="value=''" >
+<br><br>
+
+Soyisim:
+<input class="iletisim" id="soyisim" type="text" name="Soyisim" value="" onfocus="value=''" >
+<br><br>
+
+Doðum Tarihi:
+<input class="iletisim" type="date" name="dt" min="1850-01-01" max="2000-01-01"  style="color:black">
+<br><br>
+
+Medeni Hal:
+<Select name="Medeni Hal">
+<option value="Null" selected>Seçiniz</option>
+<option value="Evli">Evli</option>
+<option value="Bekar">Bekar</option>
+<option value="Boþanmýþ">Boþanmýþ</option>
+</select>
+<br><br>
+
+Cinsiyet:
+<input type="radio" name="C" value="Kadýn" checked> K
+<input type="radio" name="C" value="Erkek"> E
+<br> <br>
+
+E-mail:
+<input class="iletisim" id="address" type="text" value="" onfocus="value=''" name="email">
+<br><br>
+
+
+Öðrenim Durumu:
+<input type="checkbox" name="e" value="ilköðretim"> Ýlköðretim
+<input type="checkbox" name="e" value="Lise"> Lise
+<input type="checkbox" name="e" value="Lisans"> Lisans
+<input type="checkbox" name="e" value="Yüksek Lisans"> Yüksek Lisans
+<br><br>
+
+
+Adres: <br>
+<textarea name="adres"> </textarea>
+<br><br>
+
+
+Konu:<br>
+<textarea id="konuu" type="text" name="konu" value="Konuyu Yazýn" onfocus="value=''" ></textarea>
+<br><br>
+
+
+Mesajýnýz:<br>
+<textarea id="message" type="text" name="mesaj" value="Mesajýnýzý yazýn" onfocus="value=''"  ></textarea>
+<br><br>
+
+<button onclick="sendMail(); return false">Gönder</button>
+</form>
+</div>
+<br><br>
+
+</body>
+
+
+</html>
